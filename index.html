@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pixelhouse Test</title>
+</head>
+<body>
+	<button onclick="start()">Start</button>
+	<ul id="target"></ul>
+	<script type="text/javascript">
+		function start() {
+			$fn = 'Ryan';
+			$ln ='Yusuf';
+			
+			for(i=1;i<=100;i++){
+				$val = (i%3==0 && i%5!=0 ? $fn : (i%5==0 && i%3!=0 ? $ln : (i%3==0 && i%3==0 ? $fn+' '+$ln : i)));
+				$span = document.createElement("li");
+				$span.appendChild(document.createTextNode($val))
+				document.getElementById('target').appendChild($span);
+			}
+		}
+	</script>
+</body>
+</html>
